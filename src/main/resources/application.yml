@@ -1,0 +1,23 @@
+# H2 Database Configuration
+spring:
+  h2:
+    console.enabled=true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: ${DB_USERNAME:dummyUser}
+    password: ${DB_PASSWORD:dummyPassword}
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  application:
+    name: weather-app
+
+# OpenWeatherMap API Keys (Replace with your actual keys)
+openweathermap:
+  url: "http://api.openweathermap.org/data/2.5/weather?q={city},{countryCode}&appid={apiKey}"
+  users:
+    user1: ${USER_KEY1:dummyKey1}
+    user2: ${USER_KEY1:dummyKey2}
+    user3: ${USER_KEY1:dummyKey3}
+    user4: ${USER_KEY1:dummyKey4}
+    user5: ${USER_KEY1:dummyKey5}
