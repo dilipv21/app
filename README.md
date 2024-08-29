@@ -13,9 +13,11 @@ This is a Spring Boot application that provides weather information for a given 
 
 ![img_1.png](img_1.png)
 
-1. The API keys used in this application are from the free tier, and the weather data fetched with the free plan does not update for 3 hours. If a request is made for the same country and city, the data is served from cached data.
+1. The API keys used in this application are from the free tier, and the weather data fetched with the free plan related APIs.
 
-2. OpenWeather API requires country codes as input, making it challenging for users to know appropriate country codes https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes. This has been simplified with the help of Java(https://docs.oracle.com/javase/9/docs/api/java/util/Locale.IsoCountryCode.html.), and the API now expects the country name as input
+2. The open weather data does refresh for every 10 mins. If a request is made for the same country and city, the data is served from cached data.
+
+3. OpenWeather API requires country codes as input, making it challenging for users to know appropriate country codes https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes. This has been simplified with the help of Java(https://docs.oracle.com/javase/9/docs/api/java/util/Locale.IsoCountryCode.html.), and the API now expects the country name as input
 
 
 
